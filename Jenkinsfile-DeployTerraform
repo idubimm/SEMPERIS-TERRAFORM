@@ -37,7 +37,7 @@ pipeline {
                       echo ' this job selected to destroy AWS env , smoke tests are ignored'
                     } else {
                             sh'''#!/bin/bash
-                            chmod -R +x ../bash
+                            chmod -R +x ./bash
                             source ./bash/terraform_utils.sh
                             lb_ip=$(get_load_balance_ip)
                             source ./bash/test-flask-app.sh
