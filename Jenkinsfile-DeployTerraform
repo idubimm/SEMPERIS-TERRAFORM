@@ -17,7 +17,7 @@ pipeline {
                             #!/bin/bash
                             echo "this job selected to destroy AWS env "
                             terraform init
-                            terraform destroy
+                            terraform destroy -auto-approve
                              '''
                     } else {
                             sh'''
